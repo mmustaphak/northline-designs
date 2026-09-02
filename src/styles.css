@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @theme{
-  --font-sans: "Gesit", sans-serif;
+  --color-blue: #0051D5;
+  --font-sans: "Geist", sans-serif;
+  --text-muted-foreground: #444748;
+  --animate-slide-in: slide-in 0.4s ease-in-out;
+  @keyframes slide-in{
+    from{
+      transform: translateX(50%);
+    } to{
+      transform: translateX(0%);
+    }
+  }
 }
 * {
   box-sizing: border-box;
@@ -15,5 +25,16 @@ body,
 
 body {
   margin: 0;
+  &>*{
+    @apply container mx-auto p-4;
+  }
+}
+
+header{
+  @apply pl-0;
+}
+
+a{
+  color: var(--text-muted-foreground);
 }
 
