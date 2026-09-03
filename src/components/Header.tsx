@@ -21,7 +21,7 @@ export default function Header() {
 		</Link>
 	));
 	return (
-		<header className="flex justify-between items-center *:w-fit text-xs font-bold xl:text-base">
+		<header className="flex justify-between items-center *:w-fit text-xs container font-bold xl:text-base">
 			<Link to="/" className="w-1/2! max-w-[320px]">
 				<img src={logo} className="w-full" alt="Northline Designs" />
 			</Link>
