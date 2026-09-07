@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.webp";
 import { MdOutlineClose, MdOutlineMenu } from "react-icons/md";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useOnClickOutside } from "usehooks-ts";
 
 export default function Header() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
@@ -14,6 +15,11 @@ export default function Header() {
 		"contact-us",
 		"partnership",
 	];
+
+	const sideBarRef = useRef<HTMLDivElement>(null);
+	useOnClickOutside(sideBarRef as React.RefObject<HTMLDivElement>, () =>
+		setIsSidebarOpen(false),
+	);
 
 	const renderedLinks = routes.map((route) => (
 		<Link key={route} to={"/" + route} className="data-status-active:hidden">
@@ -38,7 +44,10 @@ export default function Header() {
 						: { display: "none" }
 				}
 			>
-				<div className="animate-slide-in flex flex-col bg-white h-dvh w-fit ml-auto p-4 gap-y-4 slide-in">
+				<div
+					ref={sideBarRef}
+					className="animate-slide-in flex flex-col bg-white h-dvh w-fit ml-auto p-4 gap-y-4 slide-in"
+				>
 					<button
 						className="self-end mt-2"
 						onClick={() => setIsSidebarOpen(false)}

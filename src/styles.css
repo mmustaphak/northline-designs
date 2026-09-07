@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @theme{
   --color-blue: #0051D5;
+  --color-light-blue: #2563EB;
   --color-grey: #C4C7C7;
   --font-sans: "Geist", sans-serif;
   --color-muted-foreground: #444748;
@@ -31,6 +32,10 @@ body {
   }
 }
 
+h1{
+  @apply font-bold text-5xl mt-4 lg:text-6xl
+}
+
 h2{
   @apply font-semibold text-3xl mt-10;
 }
@@ -44,5 +49,5 @@ a{
 }
 
 hr{
-  @apply mt-15 -ml-4 md:-ml-8 bg-grey w-screen border-b-grey;
+  @apply mt-15 -ml-4 md:-ml-8 bg-grey w-screen border-t-grey;
 }

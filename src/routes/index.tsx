@@ -56,9 +56,7 @@ function Home() {
 				<p className="bg-[#DFE9FA] border border-grey font-semibold w-fit rounded-full py-1 px-2 text-xs mt-10 text-[#121C28]">
 					UI/UX & DIGITAL PRODUCT DESIGN
 				</p>
-				<h1 className="font-bold text-5xl mt-4 lg:text-6xl">
-					Shaping the Future Through Design.
-				</h1>
+				<h1>Shaping the Future Through Design.</h1>
 				<p className="text-muted-foreground mt-6">
 					Northline Design creates thoughtful, intuitive digital experiences for
 					startups, businesses, and emerging digital products. We transform

@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 
 export default function Footer() {
 	return (
-		<footer className="flex justify-between flex-wrap">
-			<div>
+		<footer className="flex justify-between flex-wrap border-t border-grey">
+			<div className="mt-8">
 				<p className="font-bold text-4xl/11 uppercase">
 					Northline
 					<br /> Design
