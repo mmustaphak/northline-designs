@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { MdOutlineClose, MdOutlineMenu } from "react-icons/md";
 import { useOnClickOutside } from "usehooks-ts";
 import logo from "@/assets/logo.webp";
+
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const routes = [
