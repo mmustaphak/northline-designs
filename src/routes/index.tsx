@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
   return (
-    <main>
+    <>
       <section>
         <img src={hero} className="w-full" alt="Northline Design" />
         <p className="bg-[#DFE9FA] border border-grey font-semibold w-fit rounded-full py-1 px-2 text-xs mt-10 text-[#121C28]">
@@ -55,6 +55,6 @@ function Home() {
           ))}
         </div>
       </section>
-    </main>
+    </>
   );
 }
