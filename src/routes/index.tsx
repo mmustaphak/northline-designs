@@ -14,7 +14,7 @@ function Home() {
           UI/UX & DIGITAL PRODUCT DESIGN
         </p>
         <h1>Shaping the Future Through Design.</h1>
-        <p className="text-muted-foreground mt-6">
+        <p className="page-description">
           Northline Design creates thoughtful, intuitive digital experiences for startups,
           businesses, and emerging digital products. We transform complex ideas and functionality
           into seamless, purposeful user experiences that are both visually refined and effortless

@@ -1,7 +1,7 @@
-import CaseStudyCard from "@/components/CaseStudyCard";
-import { caseStudies } from "@/lib/data";
 import { createFileRoute } from "@tanstack/react-router";
 import { cn } from "cn";
+import CaseStudyCard from "@/components/CaseStudyCard";
+import { caseStudies } from "@/lib/data";
 
 export const Route = createFileRoute("/work")({
   component: RouteComponent,
@@ -12,7 +12,7 @@ function RouteComponent() {
     <main>
       <section>
         <h1>Our Work</h1>
-        <p className="text-muted-foreground max-w-150 mt-4">
+        <p className="page-description">
           A selection of digital products and platforms we've helped bring to life. Focusing on
           functional elegance and technical precision.
         </p>

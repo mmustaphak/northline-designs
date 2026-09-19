@@ -35,22 +35,43 @@ body {
   /* } */
 }
 
-h1{
-  @apply font-bold text-5xl mt-4 lg:text-6xl
+@layer components{
+  .wrapper{
+    @apply container mx-auto p-4 md:p-8;
+  }
+  .page-description{
+    @apply text-muted-foreground mt-6 max-w-3xl;
+  }
+  .hr-container{
+    @apply container mx-auto;
+  }
+  .button-link{
+    @apply bg-blue px-4 py-2 rounded-lg text-white!
+  }
+  .button-link-light{
+    @apply bg-light-blue px-4 py-2 rounded-lg text-white!
+  }
 }
 
-h2{
-  @apply font-semibold text-3xl mt-10;
-}
+@layer base{ 
+  h1{
+    @apply font-bold text-5xl mt-4 lg:text-6xl
+  }
 
-header{
-  @apply pl-0;
-}
+  h2{
+    @apply font-semibold text-3xl mt-10;
+  }
 
-a{
-  color: var(--text-muted-foreground);
-}
+  header{
+    @apply pl-0;
+  }
 
-hr{
-  @apply mt-15   bg-grey w-screen border-t-grey;
+  a{
+    color: var(--text-muted-foreground);
+  }
+
+  hr{
+    @apply mt-15   bg-grey w-screen border-t-grey;
+  }
+
 }

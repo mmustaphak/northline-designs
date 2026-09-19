@@ -1,3 +1,12 @@
+import {
+  Blend,
+  LayoutDashboard,
+  Network,
+  PanelsTopLeft,
+  PencilRuler,
+  Smartphone,
+} from "lucide-react";
+
 export type Service = {
   id: string;
   title: string;
@@ -12,6 +21,65 @@ export type CaseStudy = {
   image: string;
   featured: boolean;
 };
+
+export const servicesData = [
+  {
+    id: "ui-ux-design",
+    title: "UI/UX Design",
+    description:
+      "User-centered interfaces designed for clarity and ease of use. We prioritize functional elegance and rigorous testing to ensure seamless user journeys.",
+    Icon: PencilRuler,
+  },
+  {
+    id: "mobile-app-design",
+    title: "Mobile App Design",
+    description:
+      "Intuitive mobile experiences built around real user needs. Native iOS and Android designs tailored for performance and native conventions.",
+    Icon: Smartphone,
+  },
+  {
+    id: "web-design",
+    title: "Web Design",
+    description:
+      "Modern, responsive websites designed for businesses and digital products. We build accessible, high-performance web presences.",
+    Icon: PanelsTopLeft,
+  },
+  {
+    id: "saas-dashboards",
+    title: "SaaS & Dashboards",
+    description:
+      "Clear interfaces for complex platforms and business systems. We transform dense data into actionable, visual insights.",
+    Icon: LayoutDashboard,
+  },
+  {
+    id: "design-systems-1",
+    title: "Design Systems",
+    description:
+      "Scalable visual systems that create consistency across products. Comprehensive token libraries and component documentation.",
+    Icon: Network,
+  },
+  {
+    id: "design-systems-2",
+    title: "Design Systems",
+    description:
+      "Scalable visual systems that create consistency across products. Comprehensive token libraries and component documentation.",
+    Icon: Network,
+  },
+  {
+    id: "graphics-design",
+    title: "Graphics Design",
+    description:
+      "High-impact visual communication that cuts through the noise. From marketing collateral to digital assets, we create designs that command attention.",
+    Icon: Network,
+  },
+  {
+    id: "brand-design",
+    title: "Brand Design",
+    description:
+      "Building cohesive visual identities that tell a story. We define the look, feel, and voice of your brand to create lasting connections with your audience.",
+    Icon: Blend,
+  },
+];
 
 export const dummyData: Service[] = [
   {
@@ -103,5 +171,23 @@ export const caseStudies: CaseStudy[] = [
     description: "Performance tracking for elite athletes.",
     image: "https://picsum.photos/seed/medtrak/800/450",
     featured: false,
+  },
+];
+
+export const processSteps = [
+  {
+    title: "Discovery",
+    description:
+      "Identifying core challenges and defining clear, strategic objectives to guide the design process.",
+  },
+  {
+    title: "Design",
+    description:
+      "Iteratively refining structure, user flows, and visual direction to create clear and cohesive experiences.",
+  },
+  {
+    title: "Delivery",
+    description:
+      "Delivering meticulous design handoffs with clear documentation and ongoing support throughout implementation.",
   },
 ];
