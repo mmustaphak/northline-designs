@@ -1,15 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
-import { MdOutlineClose, MdOutlineMenu } from "react-icons/md";
 import { useOnClickOutside } from "usehooks-ts";
 import logo from "@/assets/logo.webp";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const routes = [
     "/about",
     "/work",
-    "/servies",
+    "/services",
     "/prices",
     "/submit-a-project",
     "/contact-us",
@@ -37,7 +37,7 @@ export default function Header() {
 
       {/*Mobile controls*/}
       <button type="button" className="lg:hidden" onClick={() => setIsSidebarOpen(true)}>
-        <MdOutlineMenu className="size-6 text-blue" />
+        <Menu className="size-6 text-blue" />
       </button>
       <aside
         className="absolute top-0 gap-y-4 right-0 bg-black/50 h-dvh w-screen! text-base"
@@ -50,7 +50,7 @@ export default function Header() {
           className="animate-slide-in flex flex-col bg-white h-dvh w-fit ml-auto p-4 gap-y-4 slide-in"
         >
           <button type="button" className="self-end mt-2" onClick={() => setIsSidebarOpen(false)}>
-            <MdOutlineClose className="size-6" />
+            <X className="size-6" />
           </button>
           {renderedLinks}
         </div>

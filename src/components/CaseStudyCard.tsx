@@ -1,6 +1,6 @@
 import { cn } from "cn";
-import { FaArrowRight } from "react-icons/fa";
 import type { CaseStudy } from "@/lib/data";
+import { MoveRight } from "lucide-react";
 
 type CaseStudyProps = Omit<CaseStudy, "category"> & {
   category?: string;
@@ -45,7 +45,7 @@ export default function CaseStudyCard({
               category && "text-black",
             )}
           >
-            View Our Case Study <FaArrowRight />
+            View Our Case Study <MoveRight />
           </p>
         </div>
       </div>
