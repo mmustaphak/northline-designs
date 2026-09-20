@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactUsRouteImport } from './routes/contact-us'
 import { Route as PartnershipRouteImport } from './routes/partnership'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SubmitAProjectRouteImport } from './routes/submit-a-project'
 import { Route as WorkRouteImport } from './routes/work'
@@ -37,6 +38,11 @@ const PartnershipRoute = PartnershipRouteImport.update({
   path: '/partnership',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
   '/partnership': typeof PartnershipRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/submit-a-project': typeof SubmitAProjectRoute
   '/work': typeof WorkRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
   '/partnership': typeof PartnershipRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/submit-a-project': typeof SubmitAProjectRoute
   '/work': typeof WorkRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact-us': typeof ContactUsRoute
   '/partnership': typeof PartnershipRoute
+  '/pricing': typeof PricingRoute
   '/services': typeof ServicesRoute
   '/submit-a-project': typeof SubmitAProjectRoute
   '/work': typeof WorkRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact-us'
     | '/partnership'
+    | '/pricing'
     | '/services'
     | '/submit-a-project'
     | '/work'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact-us'
     | '/partnership'
+    | '/pricing'
     | '/services'
     | '/submit-a-project'
     | '/work'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact-us'
     | '/partnership'
+    | '/pricing'
     | '/services'
     | '/submit-a-project'
     | '/work'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactUsRoute: typeof ContactUsRoute
   PartnershipRoute: typeof PartnershipRoute
+  PricingRoute: typeof PricingRoute
   ServicesRoute: typeof ServicesRoute
   SubmitAProjectRoute: typeof SubmitAProjectRoute
   WorkRoute: typeof WorkRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PartnershipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactUsRoute: ContactUsRoute,
   PartnershipRoute: PartnershipRoute,
+  PricingRoute: PricingRoute,
   ServicesRoute: ServicesRoute,
   SubmitAProjectRoute: SubmitAProjectRoute,
   WorkRoute: WorkRoute,

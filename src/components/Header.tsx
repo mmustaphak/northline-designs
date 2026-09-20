@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouter } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "usehooks-ts";
@@ -6,31 +6,32 @@ import logo from "@/assets/logo.webp";
 
 export default function Header() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
-	const routes = [
-		"/about",
-		"/work",
-		"/services",
-		"/prices",
-		"/submit-a-project",
-		"/contact-us",
-		"/partnership",
-	];
+
+	const router = useRouter();
+	const routes = Object.keys(router.routesByPath);
 
 	const sideBarRef = useRef<HTMLDivElement>(null);
 	useOnClickOutside(sideBarRef as React.RefObject<HTMLDivElement>, () =>
 		setIsSidebarOpen(false),
 	);
 
-	const renderedLinks = routes.map((route) => (
-		<Link
-			key={route}
-			onClick={() => setIsSidebarOpen(false)}
-			to={route}
-			className="data-status-active:hidden"
-		>
-			{route.charAt(1).toUpperCase() + route.slice(2)}
-		</Link>
-	));
+	const renderedLinks = routes.map((route) => {
+		const text =
+			route === "pricing"
+				? "Price"
+				: route.charAt(1).toUpperCase() + route.slice(2).replaceAll("-", " ");
+		return (
+			<Link
+				key={route}
+				onClick={() => setIsSidebarOpen(false)}
+				to={route}
+				className="data-status-active:hidden"
+			>
+				{text}
+			</Link>
+		);
+	});
+
 	return (
 		<header className="flex justify-between items-center *:w-fit text-xs container mx-auto p-4 md:p-8 font-bold xl:text-base">
 			<Link to="/" className="w-1/2! max-w-[320px]">
