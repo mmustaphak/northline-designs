@@ -175,6 +175,76 @@ export const caseStudies: CaseStudy[] = [
 	},
 ];
 
+export type PricingPlan = {
+	id: string;
+	name: string;
+	tagline: string;
+	price?: string;
+	description?: string;
+	features: string[];
+	cta: string;
+};
+
+export const digitalProductPricing: PricingPlan[] = [
+	{
+		id: "starter",
+		name: "STARTER",
+		tagline: "For simple design needs.",
+		price: "₦200,000",
+		features: ["Basic Website UI", "Basic Mobile UI", "Basic Prototype"],
+		cta: "Contact Sales",
+	},
+	{
+		id: "business",
+		name: "BUSINESS",
+		tagline: "For complete digital experiences.",
+		price: "₦300K-500K",
+		features: [
+			"Website UI/UX",
+			"Mobile App UI/UX",
+			"User Flows",
+			"Wireframes",
+			"Prototype",
+		],
+		cta: "Contact Sales",
+	},
+	{
+		id: "custom-production",
+		name: "Custom Production",
+		tagline: "Large scale design for big companies",
+		description:
+			"We create a tailored design package based on your goals, requirements and scope. Let's discuss your project.",
+		features: [],
+		cta: "Contact Sales",
+	},
+];
+
+export const brandAndVisuals: PricingPlan[] = [
+	{
+		id: "startup-and-business",
+		name: "Startup and Business",
+		tagline: "For businesses that need consistent visuals.",
+		price: "₦200,000",
+		features: [
+			"Logo & Brand Identity",
+			"Colour Palette",
+			"Typography",
+			"Brand Guidelines",
+			"Social Media Designs",
+		],
+		cta: "Contact Sales",
+	},
+	{
+		id: "custom-production",
+		name: "Custom Production",
+		tagline: "Large scale design for big companies",
+		description:
+			"We create a tailored design package based on your goals, requirements and scope. Let's discuss your project.",
+		features: [],
+		cta: "Contact Sales",
+	},
+];
+
 export const processSteps = [
 	{
 		title: "Discovery",
