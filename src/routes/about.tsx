@@ -17,10 +17,10 @@ function About() {
 	return (
 		<>
 			<section>
-				<div className="md:flex gap-x-4 md:items-stretch justify-center">
+				<div className="md:flex gap-x-10 md:items-stretch justify-center">
 					<img
 						src={headhost}
-						className="mx-auto md:max-h-150 md:mx-0 lg:max-h-105"
+						className="mx-auto md:max-h-150 w-full max-w-100 md:mx-0"
 						alt="Abdulrahman Adejumo (CEO) looking into the camera"
 					/>
 					<div className="text-center font-semibold">
@@ -30,7 +30,7 @@ function About() {
 						<p className="text-muted-foreground md:text-left mt-4">
 							FOUNDER, UI/UX & PRODUCT DESIGNER
 						</p>
-						<p className="text-muted-foreground mt-6 max-w-120 md:text-left md:text-sm lg:text-base">
+						<p className="text-muted-foreground mx-auto mt-6 max-w-100 md:text-left md:text-sm lg:text-base">
 							Northline Design is an independent UI/UX, Digital Product,
 							Graphic, and Brand Design studio focused on creating intuitive,
 							purposeful, and visually refined experiences. We work with
@@ -47,8 +47,8 @@ function About() {
 					</div>
 				</div>
 
-				<div className="text-center mt-8">
-					<p className="uppercase font-semibold text-muted-foreground md:text-left">
+				<div className="text-center mt-8 flex flex-col items-center w-fit mx-auto">
+					<p className="self-start uppercase font-semibold text-muted-foreground w-fit md:text-left">
 						Our Principles
 					</p>
 					<div className="md:flex gap-x-4 mt-10">
