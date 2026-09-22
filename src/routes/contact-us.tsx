@@ -83,7 +83,7 @@ function RouteComponent() {
 					e.preventDefault();
 					form.handleSubmit();
 				}}
-				className="grow max-w-120"
+				className="border p-4 md:p-8 rounded-lg border-grey grow max-w-120"
 			>
 				<FieldGroup>
 					{" "}
