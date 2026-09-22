@@ -69,8 +69,8 @@ function RouteComponent() {
 	return (
 		<>
 			<section className="text-center">
-				<h1>Transparent Pricing for Exceptional Design.</h1>
-				<p className="page-description">
+				<h1 className="mx-auto">Transparent Pricing for Exceptional Design.</h1>
+				<p className="page-description mx-auto">
 					Flexible design packages tailored to your product's stage and scale
 					across all our disciplines.
 				</p>
