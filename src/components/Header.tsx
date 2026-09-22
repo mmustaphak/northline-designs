@@ -25,7 +25,8 @@ export default function Header() {
 				key={route}
 				onClick={() => setIsSidebarOpen(false)}
 				to={route}
-				className="data-status-active:hidden"
+				activeProps={{ className: "text-blue! border-b border-blue" }}
+				inactiveProps={{ className: "text-muted-foreground" }}
 			>
 				{text}
 			</Link>
