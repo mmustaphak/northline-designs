@@ -4,6 +4,7 @@ import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import NotFound from "@/components/notFound";
 import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
@@ -38,6 +39,7 @@ export const Route = createRootRoute({
 		],
 	}),
 	shellComponent: RootDocument,
+	notFoundComponent: NotFound,
 });
 
 function RootDocument({ children }: { children: React.ReactNode }) {
