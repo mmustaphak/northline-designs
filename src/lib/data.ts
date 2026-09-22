@@ -6,6 +6,9 @@ import {
 	PencilRuler,
 	Smartphone,
 } from "lucide-react";
+import gem from "@/assets/gem.svg";
+import handshake from "@/assets/handshake.svg";
+import headCog from "@/assets/headCog.svg";
 
 export type Service = {
 	id: string;
@@ -260,5 +263,60 @@ export const processSteps = [
 		title: "Delivery",
 		description:
 			"Delivering meticulous design handoffs with clear documentation and ongoing support throughout implementation.",
+	},
+];
+
+export type PartnerBenefit = {
+	id: string;
+	title: string;
+	description: string;
+	image: string;
+};
+
+export const partnerBenefits: PartnerBenefit[] = [
+	{
+		id: "venture-partnerships",
+		title: "Venture Partnerships",
+		description: "Flexible models for startups and growing businesses.",
+		image: handshake,
+	},
+	{
+		id: "ecosystem-growth",
+		title: "Ecosystem Growth",
+		description: "Partnering with hubs and accelerators to foster innovation.",
+		image: headCog,
+	},
+	{
+		id: "strategic-execution",
+		title: "Strategic Execution",
+		description: "High-impact design that drives business results and scaling.",
+		image: gem,
+	},
+];
+
+export type PartnershipOpportunity = {
+	id: string;
+	title: string;
+	description: string;
+};
+
+export const partnershipOpportunities: PartnershipOpportunity[] = [
+	{
+		id: "startups-scale-ups",
+		title: "Startups & Scale-Ups",
+		description:
+			"Looking for a dedicated design partner to help scale your product.",
+	},
+	{
+		id: "corporate-ventures",
+		title: "Corporate Ventures",
+		description:
+			"Modernizing legacy systems and launching new digital initiatives.",
+	},
+	{
+		id: "hubs-accelerators",
+		title: "Hubs & Accelerators",
+		description:
+			"Supporting portfolio companies with world-class design expertise.",
 	},
 ];
