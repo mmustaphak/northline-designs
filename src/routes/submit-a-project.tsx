@@ -344,12 +344,10 @@ function RouteComponent() {
 						}}
 					</form.Field>
 				</FieldGroup>
-
 				<Button
 					size="lg"
 					className="px-10 mt-8 ml-auto bg-light-blue!"
 					type="submit"
-					form="project-request-form"
 				>
 					Submit
 				</Button>
