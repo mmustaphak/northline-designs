@@ -8,7 +8,16 @@ export default function Header() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
 	const router = useRouter();
-	const routes = Object.keys(router.routesByPath);
+	const routes = [
+		"/about",
+		"/work",
+		"/services",
+		"/pricing",
+		"/submit-a-project",
+		"/contact-us",
+		"/partnership",
+	];
+	// const routes = Object.keys(router.routesByPath);
 
 	const sideBarRef = useRef<HTMLDivElement>(null);
 	useOnClickOutside(sideBarRef as React.RefObject<HTMLDivElement>, () =>
