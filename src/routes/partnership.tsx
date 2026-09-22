@@ -57,8 +57,8 @@ function RouteComponent() {
 				innovation hubs to build the next generation of digital products.
 			</p>
 
-			<div className="flex flex-col lg:justify-center items-start mt-8 lg:flex-row space-x-4 space-y-4">
-				<div className="rounded-lg p-6 border border-grey max-w-187.5">
+			<div className="flex flex-col lg:justify-center items-start mt-8 max-w-282.5 mx-auto lg:flex-row space-x-4 space-y-4">
+				<div className="rounded-lg p-6 border border-grey">
 					<h2 className="m-0">Why Partner?</h2>
 					<p className="text-muted-foreground">
 						We believe in the power of collective expertise. By partnering with
@@ -95,7 +95,7 @@ function RouteComponent() {
 				</div>
 			</div>
 
-			<div className="lg:flex gap-x-4 mt-8">
+			<div className="lg:flex mx-auto gap-x-4 mt-8 max-w-282.5">
 				<img
 					src={sideImage}
 					alt="Office desk"
