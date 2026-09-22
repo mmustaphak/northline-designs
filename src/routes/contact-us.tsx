@@ -43,7 +43,7 @@ function RouteComponent() {
 		<section className="space-y-8 md:flex gap-x-8 justify-center">
 			<div>
 				<h1>Get in Touch.</h1>
-				<p className="page-description">
+				<p className="page-description max-w-112.5!">
 					Have a question or just want to say hi? I'm an independent designer
 					running a remote-first studio, and I'd love to hear from you.
 				</p>
